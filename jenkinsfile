@@ -1,6 +1,21 @@
-"I am Devops"
-<<<<<<< HEAD
-=======
+pipeline {
+    agent any
 
-
->>>>>>> da66b77ca9aee659ca47eab7f40c6216837c33c2
+    stages {
+        stage('Build') {
+            steps {
+                echo 'Building..'
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Testing..'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying....'
+            }
+        }
+    }
+}
